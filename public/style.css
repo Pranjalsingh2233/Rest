@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+}
+h1, h2 {
+    color: white;
+}
+.post {
+    color: white;
+}
+
+button{
+    background-color: red;
+    color: white;
+}
