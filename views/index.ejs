@@ -15,9 +15,9 @@
             <h2 class="user">
                 @<%= post.username %>
             </h2>
-            <img src="/pranjal.jpg" />
+            <img src="<%= post.image %>" />
             <p class="user">
-                <%= post.caption %>
+                Caption: <%= post.caption %>
             </p>
             <a href="http://localhost:8080/posts/<%= post.id %>">See Post</a>&nbsp;
             <a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit Post</a>

@@ -15,19 +15,19 @@ let posts = [
     {
         id: uuidv4(),
         username: "Riya Pandey",
-        image: "images/riya.jpg",
+        image: "/images/riya.jpg",
         caption: "Be your own kind of beautiful"
     },
     {
         id: uuidv4(),
         username: "Pranjal Singh",
-        image: "../images/pranjal.jpg",
+        image: "/images/pranjal.jpg",
         caption: "Stay cool, stay humble"
     },
     {
         id: uuidv4(),
         username: "Virat Kohli",
-        image: "../images/virat.jpg",
+        image: "/images/virat.jpg",
         caption: "Kohli on the field = poetry in motion"
     },
 ];
@@ -47,8 +47,10 @@ app.get("/posts/:id", (req, res) => {
 });
 
 app.post("/posts", (req, res) => {
+    let id = uuidv4();
     let {username, images, caption} = req.body;
-    posts.push({username, images, caption});
+    console.log(req.body);
+    posts.push({id, username, images, caption});
     res.redirect("http://localhost:8080/posts");
 });
 
